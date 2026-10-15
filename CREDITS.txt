@@ -1,0 +1,41 @@
+Lake Mac Home & Roof Co.: design preview by Dusk
+
+Business's own material
+  Name, logo, wording and contact details: the business's Facebook page,
+    facebook.com/p/Lake-Mac-Home-Roof-Co-61587467368162/ (172 followers, Lake Macquarie NSW),
+    read 15 October 2026. Phone 0468 390 771, email lakemachomeroofco@gmail.com,
+    "small Family owned Home Maintenance & Handyman service", "the jobs that Bigger Companies
+    think are to small", "Fully licensed & insured".
+  Two public posts by the business in Facebook community groups (found through Google):
+    Belmont community, 9 February: "family-run local tradie business", "fully licensed, qualified,
+    and insured, specialising in roofing and guttering, along with general home maintenance and
+    repairs", "honest workmanship, fair pricing, and treating every home like it's our own".
+    Warners Bay - Speers Point group, 19 March, posted by Jack Smith: "a carpenter of 15yrs and a
+    metal roofer of 5yrs", sole trader, "I believe we all deserve to be proud of our home".
+  ABN 42 669 154 930: Google result for the ABN Lookup record (Business.gov.au).
+  Suburbs named: Booragul (laundry post, 7 October), Charlestown (gutters and fascia post in a
+    Toronto community group), Belmont, Warners Bay, Speers Point, Toronto (groups the business posts in).
+  Logo: the Facebook cover image (2048 px). assets/brand/badge*.png is the badge cut out round;
+    art-inner.png and art-ring.png are its white artwork split into the flowers and the lettering
+    ring, used for the intro animation. Colour measured from the logo: #B26D62.
+  Photos (assets/img/): all from the Facebook page's photos. Without a Facebook login only the six
+    newest are available full size (entry-*.jpg, laundry-tiles.jpg); the rest are Facebook's
+    414 x 414 square previews. Untouched copies are in client-sites/_originals/lake-mac-home-roof/fb/.
+    entry-framed.jpg is cropped to remove a pointing hand at the right edge.
+
+Stock footage (Mixkit free licence, no attribution required; labelled "Stock footage" on the page)
+  roof-rain-720.mp4, roof-rain-480.mp4, roof-rain.jpg
+    mixkit.co/free-stock-video/storm-water-running-down-a-roof-21212/
+    Seconds 2 to 12, re-encoded without sound (1280x720 at 1.8 Mbps, 854x480 at 0.85 Mbps).
+
+Higgsfield
+  Not used: the connected account is on the free plan with 0 credits (checked 15 October 2026),
+  so nothing could be generated. The intro is coded animation built from the real logo.
+
+Not confirmed with the owner (written from the photos or general trade practice)
+  Captions on photos, the five-step project story (that the entry photos are one job, and that the
+  sliding door belongs to it), the tick lists under each service, the four-step "how it works",
+  the FAQ answers beyond the business's own words, "a clear quote before any work starts",
+  "the site left tidy", that the gable photos are before and after, the badge description on the
+  About page, the owner's surname (only "Jack" is used on the site). Licence number, hours,
+  reviews and years in business are not on the site; visible "to add" slots mark the licence.
