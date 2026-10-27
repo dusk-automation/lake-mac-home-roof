@@ -23,14 +23,23 @@ Business's own material
     414 x 414 square previews. Untouched copies are in client-sites/_originals/lake-mac-home-roof/fb/.
     entry-framed.jpg is cropped to remove a pointing hand at the right edge.
 
-Stock footage (Mixkit free licence, no attribution required; labelled "Stock footage" on the page)
-  roof-rain-720.mp4, roof-rain-480.mp4, roof-rain.jpg
-    mixkit.co/free-stock-video/storm-water-running-down-a-roof-21212/
-    Seconds 2 to 12, re-encoded without sound (1280x720 at 1.8 Mbps, 854x480 at 0.85 Mbps).
+Home page hero scene (AI-generated; said in the footer of every page, no label on the picture itself)
+  Made on Higgsfield on 27 October 2026 for this preview; it is not a photo of a real job or place.
+  hero-wide-1600.jpg, hero-wide-2400.jpg  GPT Image 2.5 (high, 2K, 16:9): terracotta tile roof edge
+    and gutter in the foreground, a calm lake with small sailboats and hazy gum-covered hills beyond.
+  hero-tall-750.jpg, hero-tall-1080.jpg   GPT Image 2.5 (high, 2K, 9:16), the same scene recomposed
+    upright for phones, made with the wide picture as its reference.
+  assets/video/hero-lake.mp4  Kling 3.0 (standard, 5 s, silent) from the wide picture, with the same
+    picture as first and last frame so it loops; upscaled to 1080p with Topaz, re-encoded to H.264,
+    last frame dropped. Shown on computers only; phones get the still picture with a slow drift.
+  Credits used: 2.75 + 2.75 + 7.5 + 3 (upscale) = 16. Untouched files are in
+    client-sites/_originals/lake-mac-home-roof/generated/.
+  The Mixkit stock clip used in the first version (storm water on a tile roof) is no longer on the site;
+    its original stays in client-sites/_originals/lake-mac-home-roof/stock/.
 
 Higgsfield
-  Not used: the connected account is on the free plan with 0 credits (checked 15 October 2026),
-  so nothing could be generated. The intro is coded animation built from the real logo.
+  First version (15 October 2026): not used, the account was on the free plan with 0 credits.
+  Second version (27 October 2026): Starter plan, used for the hero scene above.
 
 Not confirmed with the owner (written from the photos or general trade practice)
   Captions on photos, the five-step project story (that the entry photos are one job, and that the

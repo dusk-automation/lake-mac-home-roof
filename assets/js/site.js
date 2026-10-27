@@ -109,25 +109,28 @@
     setTimeout(mapIn, 800);
   }
 
-  /* ---------- hero video ---------- */
+  /* ---------- hero video: computers only; phones keep the still picture ---------- */
   var vid = $('.hero video');
   if (vid) {
-    var small = window.matchMedia('(max-width: 760px)').matches;
+    var big = window.matchMedia('(min-width: 761px)').matches;
     var save = navigator.connection && navigator.connection.saveData;
     var vbtn = $('.hero .vbtn');
-    if (!motion || save) {
-      vid.removeAttribute('autoplay');
-      if (vbtn) vbtn.hidden = true;
+    if (!motion || save || !big) {
+      vid.remove();
     } else {
-      vid.src = small ? vid.getAttribute('data-sm') : vid.getAttribute('data-lg');
+      vid.src = vid.getAttribute('data-src');
       vid.muted = true;
+      vid.addEventListener('playing', function () { vid.classList.add('on'); }, { once: true });
       var tryPlay = function () { var p = vid.play(); if (p && p.catch) p.catch(function () {}); };
       tryPlay();
       document.addEventListener('visibilitychange', function () { if (!document.hidden && !vid.dataset.paused) tryPlay(); });
-      if (vbtn) vbtn.addEventListener('click', function () {
-        if (vid.paused) { vid.dataset.paused = ''; delete vid.dataset.paused; tryPlay(); vbtn.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-pause"/></svg>'; vbtn.setAttribute('aria-label', 'Pause the background video'); }
-        else { vid.pause(); vid.dataset.paused = '1'; vbtn.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>'; vbtn.setAttribute('aria-label', 'Play the background video'); }
-      });
+      if (vbtn) {
+        vbtn.hidden = false;
+        vbtn.addEventListener('click', function () {
+          if (vid.paused) { delete vid.dataset.paused; tryPlay(); vbtn.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-pause"/></svg>'; vbtn.setAttribute('aria-label', 'Pause the background video'); }
+          else { vid.pause(); vid.dataset.paused = '1'; vbtn.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>'; vbtn.setAttribute('aria-label', 'Play the background video'); }
+        });
+      }
     }
   }
 

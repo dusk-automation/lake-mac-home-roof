@@ -13,8 +13,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&amp;family=Schibsted+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=1">
-<link rel="preload" as="image" href="assets/video/roof-rain.jpg">
+<link rel="stylesheet" href="assets/css/site.css?v=2">
+<link rel="preload" as="image" media="(max-width: 760px)" imagesrcset="assets/img/hero-tall-750.jpg 754w, assets/img/hero-tall-1080.jpg 1085w" imagesizes="100vw">
+<link rel="preload" as="image" media="(min-width: 761px)" imagesrcset="assets/img/hero-wide-1600.jpg 1600w, assets/img/hero-wide-2400.jpg 2400w" imagesizes="100vw">
 <script>
 (function(){var r=document.documentElement;r.classList.add('js');
 try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)r.classList.add('motion')}catch(e){}
@@ -24,11 +25,11 @@ try{var en=performance.getEntriesByType('navigation')[0];bf=!!(en&&en.type==='ba
 if(r.classList.contains('motion')&&!nav&&!bf&&!/[?&]intro=0/.test(location.search))r.classList.add('intro-on');
 setTimeout(function(){if(!window.__lmh){r.classList.remove('motion');r.classList.remove('intro-on')}},4500);
 // if a newer version has been published than the copy this browser kept, load the new one once
-try{var B='1';fetch('version.txt?'+Date.now(),{cache:'no-store'}).then(function(x){return x.ok?x.text():''}).then(function(t){t=(t||'').trim();
+try{var B='2';fetch('version.txt?'+Date.now(),{cache:'no-store'}).then(function(x){return x.ok?x.text():''}).then(function(t){t=(t||'').trim();
 if(/^\d+$/.test(t)&&t!==B&&!new RegExp('[?&]r='+t+'(&|$)').test(location.search)){location.replace(location.pathname+'?r='+t+location.hash)}}).catch(function(){})}catch(e){}
 })();
 </script>
-<script src="assets/js/site.js?v=1" defer></script>
+<script src="assets/js/site.js?v=2" defer></script>
 </head>
 <body class="page-home">
 <a class="skip" href="#main">Skip to content</a>
@@ -91,20 +92,33 @@ if(/^\d+$/.test(t)&&t!==B&&!new RegExp('[?&]r='+t+'(&|$)').test(location.search)
 </div>
 <main id="main">
 
-<section class="hero on-dark" aria-labelledby="hero-h">
-  <div class="bg"><video muted loop playsinline autoplay preload="none" poster="assets/video/roof-rain.jpg" data-lg="assets/video/roof-rain-720.mp4" data-sm="assets/video/roof-rain-480.mp4" aria-hidden="true"></video></div>
-  <span class="stock">Stock footage</span>
-  <button class="vbtn" type="button" aria-label="Pause the background video"><svg class="ico" aria-hidden="true"><use href="#i-pause"/></svg></button>
+<section class="hero" aria-labelledby="hero-h">
+  <div class="bg" aria-hidden="true">
+    <picture>
+      <source media="(max-width: 760px)" srcset="assets/img/hero-tall-750.jpg 754w, assets/img/hero-tall-1080.jpg 1085w" sizes="100vw">
+      <img src="assets/img/hero-wide-1600.jpg" srcset="assets/img/hero-wide-1600.jpg 1600w, assets/img/hero-wide-2400.jpg 2400w" sizes="100vw" alt="" width="1600" height="904" fetchpriority="high" decoding="async">
+    </picture>
+    <video muted loop playsinline preload="none" data-src="assets/video/hero-lake.mp4"></video>
+  </div>
   <div class="wrap">
-    <div>
-      <div class="h-in"><p class="eyebrow light"><svg class="spark" aria-hidden="true"><use href="#i-spark"/></svg>Lake Macquarie &middot; Family owned</p></div>
-      <h1 id="hero-h" class="h-in d1">The jobs bigger companies think are <em>too small.</em></h1>
-      <p class="lead h-in d2">That’s exactly what we’re here for. Roof repairs, gutters and the home maintenance list you’ve been putting off, done by a small local team that’s fully licensed and insured.</p>
-      <div class="acts h-in d3"><a class="btn" href="#quick-quote">Get a quote<svg class="ico" aria-hidden="true"><use href="#i-go"/></svg></a><a class="btn ghost" href="tel:0468390771"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call 0468 390 771</a></div>
-      <ul class="facts h-in d4"><li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>Fully licensed &amp; insured</li><li><svg class="ico" aria-hidden="true"><use href="#i-hammer"/></svg>15 years a carpenter</li><li><svg class="ico" aria-hidden="true"><use href="#i-roof"/></svg>Roofing &amp; guttering</li><li><svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg>No job too small</li></ul>
+    <div class="h-in"><p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#i-spark"/></svg>Family owned<span class="hide-sm"> &middot; Licensed &amp; insured</span> &middot; Lake Macquarie</p></div>
+    <h1 id="hero-h" class="h-in d1">The jobs bigger companies think are <em>too small.</em></h1>
+    <p class="lead h-in d2">Roofing, gutters and home repairs, done properly by a small local team.</p>
+    <div class="acts h-in d3"><a class="btn" href="#quote">Get a quote<svg class="ico" aria-hidden="true"><use href="#i-go"/></svg></a><a class="btn ghost" href="tel:0468390771"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>Call<span class="hide-sm"> 0468 390 771</span></span></a></div>
+  </div>
+  <button class="vbtn" type="button" aria-label="Pause the background video" hidden><svg class="ico" aria-hidden="true"><use href="#i-pause"/></svg></button>
+</section>
+
+<section class="qsec" id="quote" aria-labelledby="qsec-h">
+  <div class="wrap">
+    <div class="qsec-copy">
+      <p class="eyebrow"><svg class="spark" aria-hidden="true"><use href="#i-spark"/></svg>Get a quote</p>
+      <h2 id="qsec-h" class="rv">Three quick questions, <em>then we call you back.</em></h2>
+      <p class="lead rv d1">Tell us what needs doing and where, and we’ll call you back to organise a quote. No call centre: you deal with the person doing the work.</p>
+      <ul class="qfacts rv d2"><li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>Fully licensed &amp; insured</li><li><svg class="ico" aria-hidden="true"><use href="#i-hammer"/></svg>15 years a carpenter, 5 a metal roofer</li><li><svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg>No job too small</li></ul>
     </div>
-    <form class="qq h-in d3" id="quick-quote" data-steps novalidate aria-labelledby="qq-h">
-      <div class="head"><h2 id="qq-h">Quick quote</h2><span class="count">Step 1 of 3</span></div>
+    <form class="qq rv d1" id="quick-quote" data-steps novalidate aria-labelledby="qq-form-h">
+      <div class="head"><h3 id="qq-form-h">Quick quote</h3><span class="count">Step 1 of 3</span></div>
       <div class="prog" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="step">
         <p class="q">What needs doing?</p>
@@ -284,7 +298,7 @@ if(/^\d+$/.test(t)&&t!==B&&!new RegExp('[?&]r='+t+'(&|$)').test(location.search)
       </ul></div>
       <div><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="work.html">Our work</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="ftr-base"><span>&copy; <span data-year>2026</span> Lake Mac Home &amp; Roof Co. &middot; Lake Macquarie NSW</span><span>Design preview by Dusk. Job photos are the business’s own; the background video is free stock and is labelled. Sources in CREDITS.txt.</span></div>
+    <div class="ftr-base"><span>&copy; <span data-year>2026</span> Lake Mac Home &amp; Roof Co. &middot; Lake Macquarie NSW</span><span>Design preview by Dusk. Job photos are the business’s own; the home page scene is AI-generated. Sources in CREDITS.txt.</span></div>
   </div>
 </footer>
 <div class="bar" aria-label="Quick contact"><a class="btn ghost" href="tel:0468390771"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call</a><a class="btn" href="contact.html">Get a quote<svg class="ico" aria-hidden="true"><use href="#i-go"/></svg></a></div>
